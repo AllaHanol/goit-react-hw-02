@@ -4,6 +4,7 @@ import Feedback from "./components/Feedback/Feedback"
 import Notification from "./components/Notification/Notification"
 import Options from "./components/Options/Options"
 
+
 const App = () => {
   const [feedback, setFeedback] = useState({
     good: 0,
@@ -47,6 +48,8 @@ const resetFeedback = () => {
       )}
     </div>
   );
+  
+
 };
 
 export default App;
