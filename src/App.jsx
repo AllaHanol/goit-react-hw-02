@@ -3,6 +3,7 @@ import { useState, useEffect  } from 'react'
 import Feedback from "./components/Feedback/Feedback"
 import Notification from "./components/Notification/Notification"
 import Options from "./components/Options/Options"
+import Description from "./components/Description/Description"
 
 
 const App = () => {
@@ -38,8 +39,7 @@ const resetFeedback = () => {
 
   return (
    <div>
-      <h1>Sip Happens Café</h1>
-      <p>Please leave your feedback about our service by selecting one of the options below.</p>
+      <Description/>
       <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
       {totalFeedback > 0 ? (
         <Feedback feedback={feedback} total={totalFeedback} positivePercentage={positiveFeedbackPercentage} />
